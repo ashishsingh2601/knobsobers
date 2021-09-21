@@ -1,0 +1,20 @@
+{
+  "name": "knobsobers-backend",
+  "version": "1.0.0",
+  "description": "Backend for knobsobers!",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon -r esm server.js",
+    "start": "node -r esm server.js"
+  },
+  "author": "Ashish, Nikunj, Meenu, Divya",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

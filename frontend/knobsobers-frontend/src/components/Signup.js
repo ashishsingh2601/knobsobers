@@ -1,18 +1,40 @@
-import React, {useRef} from 'react';
-import { Card, Button, Form } from 'react-bootstrap';
+import React, {useRef, useState} from 'react';
+import { Card, Button, Form, Alert } from 'react-bootstrap';
+import {useAuth} from '../contexts/AuthContext';
+
 
 const Signup = () => {
 
     const emailRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
+    const {signup}  = useAuth();
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        if(passwordRef.current.value !== passwordConfirmRef.current.value){
+            return setError('You entered two different passwords');
+        }
+        
+        try{
+            setError('');
+            setLoading(true);
+            await signup(emailRef.current.value, passwordRef.current.value);
+        }catch{
+            setError('Failed to Register');
+        };
+        setLoading(false);          
+    };
 
     return (
         <>
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4">Register</h2>
-                    <Form>
+                    {error && <Alert variant="danger">{error}</Alert>}
+                    <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
                             <Form.Label>E-mail</Form.Label>
                             <Form.Control type="email" ref={emailRef} required/>
@@ -25,7 +47,7 @@ const Signup = () => {
                             <Form.Label>Password Confirmation</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required/>
                         </Form.Group>
-                        <Button className="w-100 text-center mt-4" type="submit">Sign Up</Button>
+                        <Button disabled={loading} className="w-100 text-center mt-4" type="submit">Sign Up</Button>
                     </Form>
                 
                 </Card.Body>

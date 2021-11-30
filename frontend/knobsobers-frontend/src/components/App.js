@@ -9,6 +9,7 @@ import LandingPage from './LandingPage/LandingPage';
 import Login from './Login';
 import ErrorPage from './ErrorPage';
 import PrivateRoute from './PrivateRoute';
+import ForgotPassword from './ForgotPassword';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 {/* </Route> */}
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
             </AuthProvider>

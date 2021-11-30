@@ -7,6 +7,7 @@ const Signup = () => {
 
     const emailRef = useRef();
     const passwordRef = useRef();
+    const usernameRef = useRef(); 
     const passwordConfirmRef = useRef();
     const {signup}  = useAuth();
     const [error, setError] = useState('');
@@ -37,6 +38,11 @@ const Signup = () => {
                     <h2 className="text-center mb-4">Register</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
+
+                        <Form.Group id="text">
+                            <Form.Label>Username</Form.Label>
+                            <Form.Control type="text" ref={usernameRef} required/>
+                        </Form.Group>                        
                         <Form.Group id="email">
                             <Form.Label>E-mail</Form.Label>
                             <Form.Control type="email" ref={emailRef} required/>

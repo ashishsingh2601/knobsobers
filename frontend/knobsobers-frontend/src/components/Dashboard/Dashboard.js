@@ -6,7 +6,7 @@ import {Link, useNavigate} from 'react-router-dom';
 const Dashboard = () => {
     
     const [error, setError] = useState('');
-    const { logout } = useAuth();
+    const { logout, currentUser } = useAuth();
     const navigate = useNavigate();
 
     const handleLogout = async () => {
@@ -23,7 +23,7 @@ const Dashboard = () => {
         <>      
             {error && <Alert variant="danger">{error}</Alert>}
             <h1>
-                It's your own personalized dashboard
+                Welcome! 
             </h1>
             
             <Button className="text-center" onClick={handleLogout}>

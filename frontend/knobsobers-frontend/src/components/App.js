@@ -10,6 +10,7 @@ import Login from './Login';
 import ErrorPage from './ErrorPage';
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
+import ImageUpload from './ImageUpload';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                   <Route path="/dashboard" element={<Dashboard />} />
                 {/* </Route> */}
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/image-upload" element={<ImageUpload />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="*" element={<ErrorPage />} />

@@ -15,8 +15,8 @@ import ImageUpload from './ImageUpload';
 function App() {
   return (
      <>
-     <Container className="d-flex align-items-center justify-content-center" style={{minHeight: '100vh'}}>
-        <div className="w-100" style={{maxWidth: '450px'}}>
+     <Container>
+        <div>
           <Router>
             <AuthProvider>
               <Routes>

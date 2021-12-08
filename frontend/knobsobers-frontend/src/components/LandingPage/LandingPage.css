@@ -1,0 +1,145 @@
+
+.top-left-container{
+    width: 100%;
+    height: 100%;
+}
+.top-left-container .landingWave{
+    margin-left: -500px;
+}
+.top-right-container{
+    float: right;
+    margin-top: 50px;
+}
+.reg_heading{
+    font-size: 1.8vw;
+}
+a:-webkit-any-link{
+    text-decoration: none;
+    color: inherit;
+    
+  } 
+ .reg_heading{
+    animation: blinker 3s linear infinite;
+ }
+  @keyframes blinker {
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  .land-front{
+    width: 100%;
+}
+.land-front h1{
+    margin-top: 30px;
+    font-size: 600%;
+    font-weight: 900;
+    margin-left: 80px;
+    word-wrap: break-word;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.land-front h6{
+    margin-left: 80px;
+}
+.land-front button{
+    margin-left: 80px;
+}
+.right-land-img{
+    width: 130%;
+    height: auto;
+}
+.right-land-img img{
+   
+    width: 72%;
+  height: auto;
+}
+.cardContainer{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    padding: 40px;
+}
+.cardContainer h1{
+    font-weight: 900;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 400%;
+    margin-top: 0;
+    margin-left: 20px;
+}
+.paraCard{
+    margin-left: 20px;
+}
+.row{
+    width: 100%;
+    justify-content: center;
+    padding-left: 60px;
+    position:relative;
+    padding-top: 30px;
+}
+.card-01{
+    background: #02029f2c;
+    flex: 1;
+    max-width: 320px;
+    height: 380px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.card-01 .img1{
+    width: 100%;
+    height: 40%;
+}
+.card-01 .img2{
+    width: 100%;
+    height: 40%;
+}
+.card-01 .img3{
+    width: 100%;
+    height: 40%;
+}
+.card-01 .img4{
+    width: 100%;
+    height: 40%;
+}
+.cardText{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+.footerGridContainer h1{
+    font-weight: 900;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 400%;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.footer{
+    width: 100%;
+    position:static;
+    margin-bottom: 0;
+    border-radius: 300px 10px 0 0;
+    background-color: rgba(176, 220, 245, 0.548);
+}
+.footerContainerDiv{
+    padding-top: 30px;
+    height: 330px; 
+}
+#row2{
+    margin-left: 5px;
+}
+.card-02{
+    flex: 1;
+    max-width: 300px;
+    height: 270px;
+    padding: 5px; 
+}
+#card2{
+    margin-left: 80px;
+}
+.footersvg{
+     width: 100%;
+     margin-bottom: 0;
+}
+
+
+

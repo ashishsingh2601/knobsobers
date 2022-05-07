@@ -1,0 +1,88 @@
+[  
+   {
+        "id": 1,
+        "name": "Elon",
+        "experience": "3 Year(s)",
+        "domain": "Entrepreneur",
+        "rating": "4"
+    },
+    {
+        "id": 2,
+        "name": "Ashish",
+        "experience": "1 Year(s)",
+        "domain": "Software Developer",
+        "rating": "4.5"
+    },
+    {
+        "id": 3,
+        "name": "Brad",
+        "experience": "8 Year(s)",
+        "domain": "Writer",
+        "rating": "0.5"
+    },
+    {
+        "id": 4,
+        "name": "Chad",
+        "experience": "34 Year(s)",
+        "domain": "Data Scientist",
+        "rating": "1.5"
+    },
+    {
+        "id": 5,
+        "name": "John",
+        "experience": "24 Year(s)",
+        "domain": "Python Developer",
+        "rating": "3"
+        
+    },
+    {
+        "id": 6,
+        "name": "Binod",
+        "experience": "12 Year(s)",
+        "domain": "Scientist",
+        "rating": "2.5"
+    },
+    {
+        "id": 7,
+        "name": "Tom",
+        "experience": "2 Year(s)",
+        "domain": "Actor",
+        "rating": "2"
+    },
+    {
+        "id": 8,
+        "name": "Ravi",
+        "experience": "6 Month(s)",
+        "domain": "Software Developer",
+        "rating": "3.5"
+    },
+    {
+        "id": 9,
+        "name": "Ramesh",
+        "experience": "4 Year(s)",
+        "domain": "Graphic Designer",
+        "rating": "4"
+    },
+    {
+        "id": 10,
+        "name": "Parth",
+        "experience": "18 Year(s)",
+        "domain": "Pilot",
+        "rating": "4.5"
+    },
+    {
+        "id": 11,
+        "name": "Harsh",
+        "experience": "9 Month(s)",
+        "domain": "Game Developer",
+        "rating": "4"
+    },
+    {
+        "id": 12,
+        "name": "Nikunj",
+        "experience": "1 Year(s)",
+        "domain": "Android Developer",
+        "rating": "4"
+    }
+]
+

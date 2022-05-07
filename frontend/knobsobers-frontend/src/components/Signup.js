@@ -33,7 +33,7 @@ const Signup = () => {
 
     return (
         <>
-            <Card className="card">
+            <Card className="card-container">
                 <Card.Body>
                     <h2 className="text-center mb-4">Register</h2>
                     {error && <Alert variant="danger">{error}</Alert>}

@@ -11,12 +11,16 @@ import ErrorPage from './ErrorPage';
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
 import ImageUpload from './ImageUpload';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Experiences from './Experiences';
+import OneOnOne from './OneOnOne';
+import Resources from './Resources';
 
 function App() {
   return (
      <>
-     <Container className="d-flex align-items-center justify-content-center" style={{minHeight: '100vh'}}>
-        <div className="w-100" style={{maxWidth: '450px'}}>
+     <Container className="root-container">
+        <div>
           <Router>
             <AuthProvider>
               <Routes>
@@ -24,6 +28,9 @@ function App() {
                 {/* <Route exact path="/dashboard" element={<PrivateRoute />}> */}
                   <Route path="/dashboard" element={<Dashboard />} />
                 {/* </Route> */}
+                <Route path="/dashboard/experiences" element={<Experiences />} />
+                <Route path="/dashboard/one-on-one" element={<OneOnOne />} />
+                <Route path="/dashboard/resources" element={<Resources />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/image-upload" element={<ImageUpload />} />
                 <Route path="/login" element={<Login />} />

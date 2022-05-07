@@ -1,0 +1,22 @@
+/* .nav-container{
+    width: 100% !important;
+    margin: 0 0 0;
+}
+/* .dashboard-navbar{
+    width: 100% !important;
+    position: relative;
+    margin: auto;
+} */ 
+.navbar-link{
+    text-decoration: none !important;
+
+}
+.mainnav-container{
+    margin-top: 1rem;
+}
+.navbar-link:hover{
+    color: #000 !important;
+}
+.navbar-link:active{
+    color: red !important;
+}

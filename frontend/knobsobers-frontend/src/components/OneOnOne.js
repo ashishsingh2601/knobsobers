@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MainNavbar from './Navbar/MainNavbar'
 import {Card} from 'react-bootstrap';
 import AvailableUsers from '../data/availableUsers.json';
-import {Modal, Button, Rate, notification, Drawer, Form, Input} from 'antd';
+import {Modal, Button, Rate, notification, Drawer, Form, Input, Badge} from 'antd';
 import { DatePicker, Space } from 'antd';
 import MyBookings from './MyBookings';
 import SearchBar from './SearchBar';
@@ -163,15 +163,16 @@ const OneonOne = () => {
                     return(
                         <>
                             <div className="one-on-one-cards">
-                                <Card className="text-center mb-3 user-card">
-                                    <Card.Header><span style={{color: '#00bf00'}}>Active Now</span></Card.Header>
+                            <Badge.Ribbon text="Active" color="green">
+                                <Card className="text-center mb-3 user-card" style={{transition: '0.3s'}}>
+                                    {/* <Card.Header><span style={{color: '#00bf00'}}>Active Now</span></Card.Header> */}
                                     <Card.Body>
                                         <Card.Title>{user.name}</Card.Title>
                                         <Card.Text>
-                                            Profession: {user.domain}
+                                            <strong>Profession:</strong> {user.domain}
                                         </Card.Text>
                                         <Card.Text>
-                                            Work Experience: {user.experience}
+                                            <strong>Work Experience:</strong> {user.experience}
                                         </Card.Text>
                                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                             <Rate allowHalf disabled defaultValue={user.rating} />
@@ -191,8 +192,9 @@ const OneonOne = () => {
                                                     marginTop:'1rem', 
                                                     textAlign:'center', 
                                                     justifyContent:'center',
-                                                    backgroundColor: '#ffa500',
-                                                    border: 'none'}}
+                                                    backgroundColor: '#ccc  ',
+                                                    border: 'none',
+                                                    color: '#000'}}
                                             ><MailOutlined />Send Mail</Button>
                                              <Drawer title="Send Mail" placement="left" onClose={onMailDrawerClose}  width={540} visible={mailDrawerVisible}>
                                                 {/* <Form >
@@ -250,7 +252,7 @@ const OneonOne = () => {
                                                             <textarea className="form-control" id="" cols="30" rows="8" placeholder="What's on your mind!?" name="message" required></textarea>
                                                         </div>
                                                         <div className="col-8 pt-3 mx-auto">
-                                                            <input type="submit" className="btn btn-info" value="Send Message" style={{color: '#fff'}}></input>
+                                                            <input type="submit" className="btn btn-info" value="Send" style={{color: '#fff'}}></input>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -260,6 +262,7 @@ const OneonOne = () => {
                                         <Button type="primary" onClick={showModal}>Book Meeting</Button> */}
                                     </Card.Body>
                                 </Card>
+                                </Badge.Ribbon>
                             </div>
                             <Modal title="Book Slot" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
                                 <Space direction="vertical" size={12}>
